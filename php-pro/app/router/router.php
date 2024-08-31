@@ -26,11 +26,21 @@ function params($uri, $matchedUri) {
     if (!empty($matchedUri)) {
         $matchedToGetParams = array_keys($matchedUri)[0];
         return array_diff(
-            explode('/', ltrim($uri, '/')),
+            $uri,
             explode('/', ltrim($matchedToGetParams, '/'))
         );
     }
     return [];
+}
+
+//formatando os parametros
+function paramsFormat($uri, $params) {
+    $paramsData = [];
+    foreach ($params as $index => $param) {
+        $paramsData[$uri[$index -1]] = $param;
+    }
+
+    return $paramsData;
 }
 
 //trabalhando com as duas funçoes juntas
@@ -42,14 +52,19 @@ function router() {
     //verificando se a rota existe
     $matchedUri = exactMatchUriInArrayRoutes($uri, $routes);
 
+    $params = [];
     if (empty($matchedUri)) {
         $matchedUri = regularExpressionMatchArrayRoutes($uri, $routes);
-
+        $uri = explode('/', ltrim($uri, '/'));
         $params = params($uri, $matchedUri);
-        var_dump($params);
-        die();
+        $params = paramsFormat($uri, $params);
+
     }
 
-    var_dump($matchedUri);
-    die();
+    if(!empty($matchedUri)) {
+        controller($matchedUri, $params);
+        return;
+    }
+
+    throw new Exception('Algo deu errado');
 }
