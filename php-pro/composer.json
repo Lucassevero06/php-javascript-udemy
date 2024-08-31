@@ -1,0 +1,21 @@
+{
+    "name": "lucas/php-pro",
+    "description": "php-profissional",
+    "type": "project",
+    "authors": [
+        {
+            "name": "LUCAS GABRIEL DA SILVA VAZ SEVERO",
+            "email": "lucasgabriel31032006@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "app/helpers/constants.php",
+            "app/router/router.php"
+        ],
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}
