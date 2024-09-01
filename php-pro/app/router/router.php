@@ -1,15 +1,14 @@
 <?php
+
 function routes() {
     return require 'routes.php';
 }
+
 //trabalhando com as uri exatas/fixas
 function exactMatchUriInArrayRoutes($uri, $routes) {
-    if (array_key_exists($uri, $routes)) {
-        return [$uri => $routes[$uri]];
-    }
-
-    return [];
+    return (array_key_exists($uri, $routes)) ? [$uri => $routes[$uri]] : [];
 }
+
 //trabalhando com as uri dinamicas
 function regularExpressionMatchArrayRoutes($uri, $routes) {
     return array_filter(
@@ -47,14 +46,15 @@ function paramsFormat($uri, $params) {
 function router() {
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); //capturando a uri
 
-    $routes = routes();
+    $routes = require 'routes.php';
+    $requestMethods = $_SERVER['REQUEST_METHOD'];
 
     //verificando se a rota existe
-    $matchedUri = exactMatchUriInArrayRoutes($uri, $routes);
+    $matchedUri = exactMatchUriInArrayRoutes($uri, $routes[$requestMethods]);
 
     $params = [];
     if (empty($matchedUri)) {
-        $matchedUri = regularExpressionMatchArrayRoutes($uri, $routes);
+        $matchedUri = regularExpressionMatchArrayRoutes($uri, $routes[$requestMethods]);
         $uri = explode('/', ltrim($uri, '/'));
         $params = params($uri, $matchedUri);
         $params = paramsFormat($uri, $params);
