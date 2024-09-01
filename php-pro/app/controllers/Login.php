@@ -14,7 +14,27 @@ class Login
 
     public function store()
     {
-        var_dump('login');
-        die();
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+        if(empty($email) || empty($password)) {
+            setFlash('message', 'Usuário ou senha estão incorretos');
+            return redirect('/login');
+        }
+
+        $user = findBy('users', 'email', $email);
+
+        if(!$user) {
+            setFlash('message', 'Usuário ou senha estão incorretos');
+            return redirect('/login');
+        }
+
+        if(!password_verify($password, $user->password)) {
+            setFlash('message', 'Usuário ou senha estão incorretos');
+            return redirect('/login');
+        }
+
+        $_SESSION['logged'] = $user;
+        return redirect('/');
     }
 }

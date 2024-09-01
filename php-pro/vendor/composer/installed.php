@@ -3,7 +3,7 @@
         'name' => 'lucas/php-pro',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '6da3fe91f25a91ee49aab5b094a4caf92f2e4657',
+        'reference' => 'e236f945c6e5ee77e443bc69cda3cf5aa7610565',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'lucas/php-pro' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '6da3fe91f25a91ee49aab5b094a4caf92f2e4657',
+            'reference' => 'e236f945c6e5ee77e443bc69cda3cf5aa7610565',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
