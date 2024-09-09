@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use function setMessageAndRedirect;
+
 class Login
 {
     public function index()
@@ -18,23 +20,27 @@ class Login
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         if(empty($email) || empty($password)) {
-            setFlash('message', 'Usuário ou senha estão incorretos');
-            return redirect('/login');
+            return setMessageAndRedirect('message', 'Usuário ou senha estão incorretos', '/login');
         }
 
         $user = findBy('users', 'email', $email);
 
         if(!$user) {
-            setFlash('message', 'Usuário ou senha estão incorretos');
-            return redirect('/login');
+            return setMessageAndRedirect('message', 'Usuário ou senha estão incorretos', '/login');
         }
 
         if(!password_verify($password, $user->password)) {
-            setFlash('message', 'Usuário ou senha estão incorretos');
-            return redirect('/login');
+            return setMessageAndRedirect('message', 'Usuário ou senha estão incorretos', '/login');
         }
 
-        $_SESSION['logged'] = $user;
+        $_SESSION[LOGGED] = $user;
         return redirect('/');
+    }
+
+    public function destroy()
+    {
+        unset($_SESSION[LOGGED]);
+
+        return redirect('/login');
     }
 }
