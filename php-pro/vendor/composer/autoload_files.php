@@ -11,6 +11,7 @@ return array(
     '94c1690abc698fc39bdb91d5b37e24b8' => $baseDir . '/app/core/controller.php',
     '0ef784ccb821bc414fdf7ddc9ae30297' => $baseDir . '/app/database/connect.php',
     '695bb66f7508c5289e26bc6a9bf31cba' => $baseDir . '/app/database/fetch.php',
+    'e5facccf56402ddfebb84489041e4c31' => $baseDir . '/app/database/create.php',
     '9b18aaeef7364f919445e49155b6f790' => $baseDir . '/app/helpers/redirect.php',
     'ae5cd88386a74480268eae82272e62c2' => $baseDir . '/app/helpers/flash.php',
     'cffd862bf805de5d099639082b809c7f' => $baseDir . '/app/helpers/sessions.php',
