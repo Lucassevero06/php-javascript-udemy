@@ -14,4 +14,5 @@ return array(
     '9b18aaeef7364f919445e49155b6f790' => $baseDir . '/app/helpers/redirect.php',
     'ae5cd88386a74480268eae82272e62c2' => $baseDir . '/app/helpers/flash.php',
     'cffd862bf805de5d099639082b809c7f' => $baseDir . '/app/helpers/sessions.php',
+    '6b0e3b367b2913cf292904898dc63ef4' => $baseDir . '/app/helpers/validate.php',
 );
