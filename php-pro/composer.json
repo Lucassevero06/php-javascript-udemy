@@ -8,7 +8,9 @@
             "email": "lucasgabriel31032006@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "league/plates": "^3.5"
+    },
     "autoload": {
         "files": [
             "app/helpers/constants.php",

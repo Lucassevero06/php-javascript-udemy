@@ -1,3 +1,4 @@
+<?php $this->layout('master', ['title' => 'Create']) ?>
 <h2>Create</h2>
 
 <?php echo getFlash('message'); ?>

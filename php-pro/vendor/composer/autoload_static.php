@@ -21,6 +21,10 @@ class ComposerStaticInitfff900e4d847fb4eeef60edc6b5c269b
     );
 
     public static $prefixLengthsPsr4 = array (
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -28,6 +32,10 @@ class ComposerStaticInitfff900e4d847fb4eeef60edc6b5c269b
     );
 
     public static $prefixDirsPsr4 = array (
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -36,9 +44,6 @@ class ComposerStaticInitfff900e4d847fb4eeef60edc6b5c269b
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'app\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
-        'app\\controllers\\Login' => __DIR__ . '/../..' . '/app/controllers/Login.php',
-        'app\\controllers\\User' => __DIR__ . '/../..' . '/app/controllers/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
