@@ -32,7 +32,7 @@ class User
     {
         $validate = validate([
             'name' => 'required',
-            'email' => 'email|unique:users',
+            'email' => 'required|email|unique:users',
             'password' => 'required|maxlen:5',
         ]);
 
