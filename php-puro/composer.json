@@ -1,0 +1,20 @@
+{
+    "name": "lucas/php-puro",
+    "description": "php-profissional",
+    "type": "project",
+    "autoload": {
+        "files": [
+            "app/helpers/constants.php"
+        ],
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lucas.severo",
+            "email": "lucasgabriel31032006@gmail.com"
+        }
+    ],
+    "require": {}
+}

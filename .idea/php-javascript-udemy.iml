@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/php-pro/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/php-puro/app" isTestSource="false" packagePrefix="app\" />
       <excludeFolder url="file://$MODULE_DIR$/php-pro/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/php-pro/vendor/league/plates" />
+      <excludeFolder url="file://$MODULE_DIR$/php-puro/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
