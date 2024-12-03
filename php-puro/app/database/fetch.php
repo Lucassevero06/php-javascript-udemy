@@ -17,7 +17,6 @@ function findBy($table, $field, $value, $fields = '*') {
 
         $prepare = $connect->prepare("SELECT {$fields} FROM {$table} WHERE {$field} = :field");
 
-        // Passando o valor de $value para o parâmetro :field
         $prepare->execute([
             'field' => $value
         ]);
