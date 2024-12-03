@@ -8,8 +8,11 @@ class ComposerStaticInita68e0c088991f662191795057f340875
 {
     public static $files = array (
         'cac981c14181c530b9a8053f8607f03c' => __DIR__ . '/../..' . '/app/helpers/constants.php',
+        'cb15a041a7e28f55ee4b162ae41a14d1' => __DIR__ . '/../..' . '/app/helpers/redirect.php',
         '49ef3dc28d7796e74e0e0bc8d5d9def8' => __DIR__ . '/../..' . '/app/router/router.php',
         'ed77c11f49efd0068479fbd96d2f1946' => __DIR__ . '/../..' . '/app/core/controller.php',
+        'cb26a376ada5e1562e282b3cdeb5e15a' => __DIR__ . '/../..' . '/app/database/connect.php',
+        '056de15e80130e2c883b8fe6796fa73e' => __DIR__ . '/../..' . '/app/database/fetch.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -28,6 +31,8 @@ class ComposerStaticInita68e0c088991f662191795057f340875
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'app\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
+        'app\\controllers\\User' => __DIR__ . '/../..' . '/app/controllers/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
