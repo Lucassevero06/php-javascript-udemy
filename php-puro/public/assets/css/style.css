@@ -31,3 +31,29 @@ body {
     width: 100%;
     align-items: center;
 }
+
+ul#menu-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+ul#menu-list li {
+    margin-right: 15px;
+}
+
+#status_login {
+    background-color: #efefef;
+}
+
+ul#users-home {
+    list-style: none;
+    padding: 0;
+}
+
+ul#users-home li {
+    background-color: aquamarine;
+    padding: 5px;
+    margin-bottom: 3px;
+}

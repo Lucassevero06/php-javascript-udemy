@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+    <div class="header">
+        <?php require 'partials/header.php' ?>
+    </div>
     <div class="container">
         <?php require VIEWS.$view; ?>
     </div>
